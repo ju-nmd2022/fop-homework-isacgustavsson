@@ -9,6 +9,7 @@ let canvasPositionX = 300;
 let canvasPositionY = 300;
 let s = 0.8;
 let alienMessage = "clickety clack!";
+let outLineColor = "black";
 
 // Background color
 
@@ -16,8 +17,8 @@ background("#5d13e7");
 
 //Emoji Outline Below
 
-function drawEmoji(canvasPositionX, canvasPositionY, s) {
-  fill("black");
+function drawEmoji(canvasPositionX, canvasPositionY, s, outLineColor) {
+  fill(outLineColor);
   noStroke();
   scale(s);
   translate(canvasPositionX, canvasPositionY);
@@ -272,11 +273,13 @@ function drawEmoji(canvasPositionX, canvasPositionY, s) {
   */
 }
 push();
-drawEmoji(canvasPositionX, canvasPositionY, s * 0.6);
+drawEmoji(canvasPositionX, canvasPositionY, s * 0.7, outLineColor);
 pop();
 push();
-drawEmoji(canvasPositionX + 150, canvasPositionY + 100, s * 0.9);
+outLineColor = "magenta";
+drawEmoji(canvasPositionX + 400, canvasPositionY + 10, s * 0.9, outLineColor);
 pop();
 push();
-drawEmoji(canvasPositionX + 300, canvasPositionY + 200, s * 1.2);
+outLineColor = "cyan";
+drawEmoji(canvasPositionX, canvasPositionY + 200, s * 1.2, outLineColor);
 pop();
